@@ -1,6 +1,6 @@
 package com.example.carshop.service.Impl;
 
-import com.example.carshop.controller.dto.ArticleDto;
+import com.example.carshop.dto.ArticleDto;
 import com.example.carshop.model.Article;
 import com.example.carshop.repository.ArticleRepository;
 import com.example.carshop.service.ArticleService;
@@ -15,6 +15,7 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
     private final ArticleRepository articleRepository;
     private final CategoryService categoryService;
+
     @Override
     public Article addArticle(ArticleDto articleDto) throws Exception {
         Article article = new Article();

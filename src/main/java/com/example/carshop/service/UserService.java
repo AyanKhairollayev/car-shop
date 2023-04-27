@@ -1,6 +1,6 @@
 package com.example.carshop.service;
 
-import com.example.carshop.controller.dto.UserDto;
+import com.example.carshop.dto.UserDto;
 import com.example.carshop.model.User;
 import org.springframework.http.ResponseEntity;
 

@@ -1,6 +1,6 @@
 package com.example.carshop.controller;
 
-import com.example.carshop.controller.dto.CategoryDto;
+import com.example.carshop.dto.CategoryDto;
 import com.example.carshop.model.Category;
 import com.example.carshop.service.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class CategoryController {
 
     @PostMapping("api/category/create")
     public ResponseEntity<?> createCateegory(@RequestBody CategoryDto categoryDto) throws Exception{
-        String name = categoryService.createCateegory(categoryDto).getName();
+        String name = categoryService.createCategory(categoryDto).getName();
         return ResponseEntity.ok().body("Car create - " + name);
     }
 

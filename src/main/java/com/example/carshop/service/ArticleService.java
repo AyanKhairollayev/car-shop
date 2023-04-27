@@ -1,6 +1,6 @@
 package com.example.carshop.service;
 
-import com.example.carshop.controller.dto.ArticleDto;
+import com.example.carshop.dto.ArticleDto;
 import com.example.carshop.model.Article;
 
 import java.util.List;

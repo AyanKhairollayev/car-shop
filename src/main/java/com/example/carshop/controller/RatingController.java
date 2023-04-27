@@ -1,6 +1,6 @@
 package com.example.carshop.controller;
 
-import com.example.carshop.controller.dto.RatingDto;
+import com.example.carshop.dto.RatingDto;
 import com.example.carshop.model.Rating;
 import com.example.carshop.service.RatingService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ public class RatingController {
     @PostMapping("api/rating/addrate")
     public ResponseEntity<?> addRating(@RequestBody RatingDto ratingDTO) throws Exception {
         Double value = ratingService.addRating(ratingDTO).getRatingValue();
-        return ResponseEntity.ok().body("Rating is add - " + value);
+        return ResponseEntity.ok().body("Rating added - " + value);
     }
 
     @GetMapping("api/rating/getavgrate/{carId}")
@@ -28,7 +28,7 @@ public class RatingController {
     @DeleteMapping("api/rating/delrate/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         ratingService.delete(id);
-        return ResponseEntity.ok().body("Rating del");
+        return ResponseEntity.ok().body("Rating deleted");
     }
 
     @GetMapping("api/ratings")

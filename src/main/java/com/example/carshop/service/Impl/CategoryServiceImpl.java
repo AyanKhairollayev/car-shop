@@ -1,6 +1,6 @@
 package com.example.carshop.service.Impl;
 
-import com.example.carshop.controller.dto.CategoryDto;
+import com.example.carshop.dto.CategoryDto;
 import com.example.carshop.model.Category;
 import com.example.carshop.repository.CategoryRepository;
 import com.example.carshop.service.CategoryService;
@@ -15,7 +15,7 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     @Override
-    public Category createCateegory(CategoryDto categoryDto) throws Exception {
+    public Category createCategory(CategoryDto categoryDto) throws Exception {
         Category category = new Category();
         category.setName(categoryDto.getName());
         return categoryRepository.save(category);

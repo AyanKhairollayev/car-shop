@@ -1,6 +1,6 @@
 package com.example.carshop.service.Impl;
 
-import com.example.carshop.controller.dto.RatingDto;
+import com.example.carshop.dto.RatingDto;
 import com.example.carshop.model.Rating;
 import com.example.carshop.repository.RatingRepository;
 import com.example.carshop.service.CarService;

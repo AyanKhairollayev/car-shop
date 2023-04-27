@@ -1,6 +1,6 @@
 package com.example.carshop.controller;
 
-import com.example.carshop.controller.dto.ArticleDto;
+import com.example.carshop.dto.ArticleDto;
 import com.example.carshop.model.Article;
 import com.example.carshop.service.ArticleService;
 import lombok.RequiredArgsConstructor;

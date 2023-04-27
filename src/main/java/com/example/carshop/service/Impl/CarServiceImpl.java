@@ -1,6 +1,6 @@
 package com.example.carshop.service.Impl;
 
-import com.example.carshop.controller.dto.CarDto;
+import com.example.carshop.dto.CarDto;
 import com.example.carshop.model.Car;
 import com.example.carshop.repository.CarRepository;
 import com.example.carshop.service.CarService;

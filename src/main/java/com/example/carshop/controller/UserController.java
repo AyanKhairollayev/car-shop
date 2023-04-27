@@ -1,6 +1,6 @@
 package com.example.carshop.controller;
 
-import com.example.carshop.controller.dto.UserDto;
+import com.example.carshop.dto.UserDto;
 import com.example.carshop.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

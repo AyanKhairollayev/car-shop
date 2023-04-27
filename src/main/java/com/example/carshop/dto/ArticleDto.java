@@ -1,4 +1,4 @@
-package com.example.carshop.controller.dto;
+package com.example.carshop.dto;
 
 import lombok.Getter;
 import lombok.Setter;

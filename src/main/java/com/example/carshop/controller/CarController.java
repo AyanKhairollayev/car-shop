@@ -1,6 +1,6 @@
 package com.example.carshop.controller;
 
-import com.example.carshop.controller.dto.CarDto;
+import com.example.carshop.dto.CarDto;
 import com.example.carshop.model.Car;
 import com.example.carshop.service.CarService;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +28,7 @@ public class CarController {
     @DeleteMapping("api/carname/delete/{id}")
     public ResponseEntity<?> deleteCarName(@PathVariable Long id){
         carService.deleteCarName(id);
-        return ResponseEntity.ok().body("Car del");
+        return ResponseEntity.ok().body("Car deleted");
     }
 
     @GetMapping("api/cars")

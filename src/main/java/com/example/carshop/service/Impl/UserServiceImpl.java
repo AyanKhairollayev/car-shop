@@ -1,7 +1,7 @@
 package com.example.carshop.service.Impl;
 
 import com.example.carshop.configuration.JwtUtils;
-import com.example.carshop.controller.dto.UserDto;
+import com.example.carshop.dto.UserDto;
 import com.example.carshop.model.User;
 import com.example.carshop.repository.RoleRepository;
 import com.example.carshop.repository.UserRepository;
@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -37,6 +38,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity<?> login(UserDto dto) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword())
