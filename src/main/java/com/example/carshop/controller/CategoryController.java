@@ -17,7 +17,7 @@ public class CategoryController {
     @PostMapping("api/category/create")
     public ResponseEntity<?> createCateegory(@RequestBody CategoryDto categoryDto) throws Exception{
         String name = categoryService.createCategory(categoryDto).getName();
-        return ResponseEntity.ok().body("Car create - " + name);
+        return ResponseEntity.ok().body("Category created - " + name);
     }
 
     @PutMapping("api/category/update/{id}")
@@ -28,7 +28,7 @@ public class CategoryController {
     @DeleteMapping("api/category/delete/{id}")
     public ResponseEntity<?> deleteCategory(@PathVariable Long id){
         categoryService.deleteCategory(id);
-        return ResponseEntity.ok().body("Category del");
+        return ResponseEntity.ok().body("Category deleted");
     }
 
     @GetMapping("api/categories")

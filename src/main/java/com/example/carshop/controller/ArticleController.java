@@ -17,7 +17,7 @@ public class ArticleController {
     @PostMapping("api/article/addarticle")
     public ResponseEntity<?> addArticle(@RequestBody ArticleDto articleDto) throws Exception{
         String name = articleService.addArticle(articleDto).getTitle();
-        return ResponseEntity.ok().body("Article create - " + name);
+        return ResponseEntity.ok().body("Article created - " + name);
     }
 
     @PutMapping("api/article/update/{id}")
@@ -28,7 +28,7 @@ public class ArticleController {
     @DeleteMapping("api/article/delete/{id}")
     public ResponseEntity<?> deleteArticle(@PathVariable Long id){
         articleService.delete(id);
-        return ResponseEntity.ok().body("Article del");
+        return ResponseEntity.ok().body("Article deleted");
     }
 
     @GetMapping("api/articles")
